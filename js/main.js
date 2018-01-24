@@ -29,6 +29,7 @@ function checkCollision(){
     jugador1.render();
     jugador2.render();
     pelota.render();
+    pelota.move();
   } 
 
 });
