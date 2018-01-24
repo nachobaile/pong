@@ -38,3 +38,14 @@
   );
   border-radius: 50%;
 }
+.contador{
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  background:red;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: center;
+
+}

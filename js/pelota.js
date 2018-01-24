@@ -15,13 +15,17 @@ function Pelota(x, y, sX, sY,size) {
     this.element.css({ top: this.y });
   }
 
+  Pelota.prototype.switchDirection = function(){
+    this.speedX *= -1
+  }
+
   // Pelota.prototype.move = function(){
   //   console.log('me muevo')
   //   this.element.css({top:this.y--,left: this.x++})
   // }
   Pelota.prototype.move = function(){
     if(this.x >= $("#pantalla").width()-35 || this.x <= 0){
-      this.speedX *= -1;
+      this.switchDirection()
     }
     if(this.y >= $("#pantalla").height()-35 || this.y <= 0){
       this.speedY *= -1;
@@ -30,6 +34,7 @@ function Pelota(x, y, sX, sY,size) {
     this.y += this.speedY;
     this.element.css({top:this.y, left:this.x});
   }
+  
   //    Pelota.prototype.move = function(){
      
 // }
