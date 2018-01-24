@@ -4,6 +4,8 @@ function Pelota(x, y, sX, sY,size) {
     this.speedX = sX;
     this.speedY = sY;
     this.size = size;
+    this.height=35;
+    this.width=35;
     this.element = $("<div>").attr("class", "pelota");
     this.element.css({ top: this.y, left: this.x});
     $("#pantalla").append(this.element);
@@ -18,10 +20,10 @@ function Pelota(x, y, sX, sY,size) {
   //   this.element.css({top:this.y--,left: this.x++})
   // }
   Pelota.prototype.move = function(){
-    if(this.x >= $("#pantalla").width() || this.x <= 0){
+    if(this.x >= $("#pantalla").width()-35 || this.x <= 0){
       this.speedX *= -1;
     }
-    if(this.y >= $("#pantalla").height() || this.y <= 0){
+    if(this.y >= $("#pantalla").height()-35 || this.y <= 0){
       this.speedY *= -1;
     }
     this.x += this.speedX;

@@ -1,6 +1,8 @@
 function Jugador(x, y, speed, keys,size) {
   this.x = x;
   this.y = y;
+  this.height= 200;
+  this.width= 30;
   this.speed = speed;
   this.keys = keys;
   this.size = size;
