@@ -70,7 +70,7 @@ body{
 #fondo-estadio{
   position: absolute;
   left:50%;
-  top:500px;
+  top:-200px;
   transform: translateX(-50%);
 
 } 

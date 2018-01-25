@@ -22,9 +22,9 @@ Score.prototype.render = function() {
 //   this.element1.css({ top: this.x, left: this.y });
 // };
 Score.prototype.goal1 = function() {
-  $(".contador1").text((this.score1 += 1));
+  $(".contador").text((this.score1 += 1));
 };
 
 Score.prototype.goal = function() {
-  $(".contador").text((this.score += 1));
+  $(".contador1").text((this.score += 1));
 };

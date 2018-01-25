@@ -8,6 +8,7 @@ $(document).ready(function() {
   var pelota = new Pelota(650, 350, 8, 8, size);
   var score = new Score(50, 50,"contador");
   var score1 = new Score(1230, 500,"contador1");
+  var goles = 0;
   $(document).keydown(function(e) {
     jugador1.key(e.keyCode);
     jugador2.key(e.keyCode);
@@ -29,7 +30,10 @@ $(document).ready(function() {
   function checkGoal() {
     if (pelota.scoreGoal()) {
       score.goal();
+      goles++
+      if (goles >3 ){
       clearInterval(set);
+      }
     }
     if (pelota.scoreGoal1()) {
       console.log("pajarito");
