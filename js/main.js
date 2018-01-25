@@ -4,7 +4,7 @@ $(document).ready(function() {
   var size = { width: 1300, height: 750 };
 
   var jugador1 = new Jugador(70, 0, 25, [81, 65], size); // Q,A
-  var jugador2 = new Jugador(1200, 500, 25, [38, 40], size); // Arrow UP, Aqrrow Down
+  var jugador2 = new Jugador(1200, 500, 25, [38, 40], size); // Arrow UP, Arrow Down
   var pelota = new Pelota(650, 350, 8, 8, size);
   var score = new Score(50, 50,"contador");
   var score1 = new Score(1230, 500,"contador1");
@@ -13,24 +13,14 @@ $(document).ready(function() {
     jugador2.key(e.keyCode);
   });
 
-  setInterval(update, 1000 / 60);
+  var set= setInterval(update, 1000 / 60);
   function update() {
     jugador1.render();
     jugador2.render();
     pelota.move();
     pelota.render();
     score.render();
-    // score1.render();
-
-    // if (pelota.x <= Jugador.width+Jugador.x) {
-    //   if (pelota.y > jugador1.y &&
-    //            pelota.y < jugador + jugador.height) {
-    //       leftSpeedOfBall = -leftSpeedOfBall;
-    //   } else {
-    //       score++;
-    // restart();
-
-    // if("condición para que suba el marcador")
+    
 
     checkGoal();
     checkCollision();
@@ -39,10 +29,14 @@ $(document).ready(function() {
   function checkGoal() {
     if (pelota.scoreGoal()) {
       score.goal();
+      clearInterval(set);
     }
     if (pelota.scoreGoal1()) {
       console.log("pajarito");
       score1.goal1();
+      console.log("toma");
+      clearInterval(set);
+      console.log("prueba");
     }
   }
 

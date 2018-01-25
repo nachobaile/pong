@@ -1,11 +1,17 @@
+body{
+  
+ 
+  
+  
+}
 #pantalla {
   height: 750px;
   width: 1300px;
-  top: 100px;
-  left: 300px;
+  top: 462px;
+  left: 50%;
   background:url("../imagenes/campo.jpg");
-  position: relative;
-  border: solid 10px #86e608;
+  position: absolute;
+  transform: translateX(-50%);
 }
 
 .jugador {
@@ -59,4 +65,18 @@
   left: 1150px;
   top: 50px;
 
+}
+
+#fondo-estadio{
+  position: absolute;
+  left:50%;
+  top:500px;
+  transform: translateX(-50%);
+
+} 
+img{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2434px;
 }
