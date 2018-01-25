@@ -6,7 +6,7 @@ function Pelota(x, y, sX, sY,size) {
     this.size = size;
     this.height=35;
     this.width=35;
-    this.element = $("<div>").attr("class", "pelota");
+    this.element = $("<img>").attr("class", "pelota");
     this.element.css({ top: this.y, left: this.x});
     $("#pantalla").append(this.element);
   }
@@ -33,6 +33,14 @@ function Pelota(x, y, sX, sY,size) {
     this.x += this.speedX;
     this.y += this.speedY;
     this.element.css({top:this.y, left:this.x});
+  }
+
+  Pelota.prototype.scoreGoal = function (){
+    return this.x < 1
+  }
+  Pelota.prototype.scoreGoal1 = function (){
+    console.log($("#pantalla").width())
+    return this.x > ($("#pantalla").width() - this.width - 1)
   }
   
   //    Pelota.prototype.move = function(){

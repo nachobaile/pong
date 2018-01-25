@@ -6,6 +6,7 @@ function Jugador(x, y, speed, keys,size) {
   this.speed = speed;
   this.keys = keys;
   this.size = size;
+  
 
   this.element = $("<div>").attr("class", "jugador");
   this.element.css({ top: this.y, left: this.x });
