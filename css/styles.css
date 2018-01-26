@@ -119,4 +119,5 @@ img{
   border-radius: 20%;
   background: radial-gradient(ellipse at center, rgba(185,214,97,1) 0%, rgba(41,138,44,1) 100%);
   font-size: 25px;
+  border: 2px solid rgb(54, 51, 51);
 }
