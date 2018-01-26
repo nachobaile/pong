@@ -69,9 +69,22 @@ $(document).ready(function() {
     }
 
     function restart() {
-      this.jugador1 = new Jugador(70, 0, 25, [81, 65], size);
-      this.jugador2 = new Jugador(1200, 500, 25, [38, 40], size);
-      this.pelota = new Pelota(650, 350, 8, 8, size);
+      pelota.x = 650;
+      pelota.y = 350;
+      pelota.speedX = 8;
+      pelota.speedY = 8;
+      $(".contador").text('0')
+      $(".contador1").text('0')
+      goles = 0;
+      setInterval(update, 1000 / 60);
+      clearInterval(set);
+
     }
-  }
+
+  
+      document.getElementById("jugar").onclick = function(){
+       restart();
+      }
+   }
+  
 });

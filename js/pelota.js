@@ -39,7 +39,6 @@ function Pelota(x, y, sX, sY,size) {
     return this.x < 1
   }
   Pelota.prototype.scoreGoal1 = function (){
-    console.log($("#pantalla").width())
     return this.x > ($("#pantalla").width() - this.width - 1)
   }
   
