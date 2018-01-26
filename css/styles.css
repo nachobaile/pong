@@ -1,5 +1,7 @@
 body{
   overflow: hidden; 
+  background: radial-gradient(ellipse at center, rgba(185,214,97,1) 0%, rgba(41,138,44,1) 100%);
+  
 }
 #pantalla {
   height: 750px;
@@ -99,5 +101,22 @@ img{
   left: -50px;
   text-align: center;
   background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+}
+.pantalla-inicio{
+  background: radial-gradient(ellipse at center, rgba(185,214,97,1) 0%, rgba(41,138,44,1) 100%);
+}
+.pelota-fondo{
   
+  width: 500px;
+  height: 500px;
+}
+#inicio{
+  position: absolute;
+  top: 900px;
+  height: 200px;
+  width: 400px;
+  left:1100px;
+  border-radius: 20%;
+  background: radial-gradient(ellipse at center, rgba(185,214,97,1) 0%, rgba(41,138,44,1) 100%);
+  font-size: 25px;
 }
